@@ -7,7 +7,7 @@ function App(){
     const handleClick=event=>{
         let id=event.currentTarget.id;
         setCount(count+1);
-        if(count%2==0)
+        if(count%2===0)
         document.getElementById(id).textContent="X";
         else
         document.getElementById(id).textContent="O";
@@ -22,7 +22,7 @@ function App(){
             let a=document.getElementById(i).textContent;
             let b=document.getElementById(i+1).textContent;
             let c=document.getElementById(i+2).textContent;
-            if(a!=""&&(a==b)&&a==c)
+            if(a!==""&&(a===b)&&a===c)
             {
                 alert(a+"wins");
             }
@@ -33,7 +33,7 @@ function App(){
             let a=document.getElementById(i).textContent;
             let b=document.getElementById(i+3).textContent;
             let c=document.getElementById(i+6).textContent;
-            if(a!=""&&(a==b)&&a==c)
+            if(a!==""&&(a===b)&&a===c)
             {
                 alert(a+"wins");
             }
@@ -42,14 +42,14 @@ function App(){
         let a=document.getElementById(1).textContent;
         let b=document.getElementById(5).textContent;
         let c=document.getElementById(9).textContent;
-        if(a!=""&&(a==b)&&a==c)
+        if(a!==""&&(a===b)&&a===c)
         {
             alert(a+"wins");
         }
         a=document.getElementById(3).textContent;
         b=document.getElementById(5).textContent;
         c=document.getElementById(7).textContent;
-        if(a!=""&&(a==b)&&a==c)
+        if(a!==""&&(a===b)&&a===c)
         {
             alert(a+"wins");
         }
