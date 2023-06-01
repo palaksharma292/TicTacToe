@@ -1,0 +1,8 @@
+.cell{
+    border:3px solid cadetblue;
+    margin: 0;
+    padding: 5px;
+    height: 50px;
+    width: 50px;
+    font-size: xx-large;
+}
