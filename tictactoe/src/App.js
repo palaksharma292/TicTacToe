@@ -12,7 +12,15 @@ function App(){
         else
         document.getElementById(id).textContent="O";
 
-        CheckWin();
+        // Recording moves
+        
+
+        //record win
+        let result=CheckWin();
+        if(result!=null)
+        {
+            document.write(result+" wins");
+        }
     }
 
     const CheckWin=()=>{
@@ -24,7 +32,7 @@ function App(){
             let c=document.getElementById(i+2).textContent;
             if(a!==""&&(a===b)&&a===c)
             {
-                alert(a+"wins");
+                return(a);
             }
         }
         // Vertical
@@ -35,7 +43,7 @@ function App(){
             let c=document.getElementById(i+6).textContent;
             if(a!==""&&(a===b)&&a===c)
             {
-                alert(a+"wins");
+                return(a);
             }
         }
         // diagonal
@@ -44,35 +52,38 @@ function App(){
         let c=document.getElementById(9).textContent;
         if(a!==""&&(a===b)&&a===c)
         {
-            alert(a+"wins");
+            return(a);
         }
         a=document.getElementById(3).textContent;
         b=document.getElementById(5).textContent;
         c=document.getElementById(7).textContent;
         if(a!==""&&(a===b)&&a===c)
         {
-            alert(a+"wins");
+            return(a);
         }
+        return(null);
     }
 
     return (
         <div>
             <table>
-                <tr>
-                    <td id="1" className="cell" onClick={handleClick}></td>
-                    <td id="2" className="cell" onClick={handleClick}></td>
-                    <td id="3" className="cell" onClick={handleClick}></td>
-                </tr>
-                <tr>
-                    <td id="4" className="cell" onClick={handleClick}></td>
-                    <td id="5" className="cell" onClick={handleClick}></td>
-                    <td id="6" className="cell" onClick={handleClick}></td>
-                </tr>
-                <tr>
-                    <td id="7" className="cell" onClick={handleClick}></td>
-                    <td id="8" className="cell" onClick={handleClick}></td>
-                    <td id="9" className="cell" onClick={handleClick}></td>
-                </tr>
+                <tbody>
+                    <tr>
+                        <td id="1" className="cell" onClick={handleClick}></td>
+                        <td id="2" className="cell" onClick={handleClick}></td>
+                        <td id="3" className="cell" onClick={handleClick}></td>
+                    </tr>
+                    <tr>
+                        <td id="4" className="cell" onClick={handleClick}></td>
+                        <td id="5" className="cell" onClick={handleClick}></td>
+                        <td id="6" className="cell" onClick={handleClick}></td>
+                    </tr>
+                    <tr>
+                        <td id="7" className="cell" onClick={handleClick}></td>
+                        <td id="8" className="cell" onClick={handleClick}></td>
+                        <td id="9" className="cell" onClick={handleClick}></td>
+                    </tr>
+                </tbody>
             </table>
         </div>
     );
